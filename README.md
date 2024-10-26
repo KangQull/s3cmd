@@ -1,3 +1,4 @@
+<img src="https://www.pngwing.com/en/free-png-phcsn" alt="Girl in a jacket" width="500" height="600">
 # S3CMD VPS UBUNTU
 Backup and Restore Script.
 
@@ -63,3 +64,32 @@ sh backups3.sh
 ```
 
 Tunggu sambil ngopi Sampai proses selesai backup.
+
+
+# Cara untuk Restor backup ke VPS baru
+
+pertama install S3CMD Seperti cara di atas sesuakan dengan s3object storage backup kalian .
+
+# Buat Script Restore
+Kalau sudah install, bikin script untuk restore backup VPS nya, paste script di bawah ini.
+
+```bash
+touch restores3.sh
+```
+```bash
+nano restores3.sh
+```
+Paste Script nya
+```bash
+#!/bin/sh
+echo 'Started Restore to your Spaces VPS'
+date +'%a %b %e %H:%M:$S %Z %Y'
+s3cmd get -r s3://bkvps/srv/ /srv
+s3cmd get -r s3://bkvps/etc/ /etc
+s3cmd get -r s3://bkvps/home/ /home
+s3cmd get -r s3://bkvps/var/ /var
+date +'%a %b %e %H:%M:$S %Z %Y'
+echo 'Finished Restore to your Spaces VPS'
+```
+
+Tunggu Prosses restore Sampai Selesai.
