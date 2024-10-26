@@ -1,5 +1,5 @@
 <img src="https://github.com/KangQull/s3cmd/blob/main/logoss3cmd.png" alt="Girl in a jacket" width="250" height="250">
-# S3CMD VPS UBUNTU
+S3CMD VPS UBUNTU
 Backup and Restore Script.
 
 # Install S3CMD VPS
@@ -66,7 +66,7 @@ sh backups3.sh
 Tunggu sambil ngopi Sampai proses selesai backup.
 
 
-# Cara untuk Restor backup ke VPS baru
+# Cara untuk Restore backup ke VPS baru
 
 pertama install S3CMD Seperti cara di atas sesuakan dengan s3object storage backup kalian .
 
@@ -90,6 +90,10 @@ s3cmd get -r s3://bkvps/home/ /home
 s3cmd get -r s3://bkvps/var/ /var
 date +'%a %b %e %H:%M:$S %Z %Y'
 echo 'Finished Restore to your Spaces VPS'
+```
+# Cara menjalankan Script Restore
+```bash
+sh restores3.sh
 ```
 
 Tunggu Prosses restore Sampai Selesai.
