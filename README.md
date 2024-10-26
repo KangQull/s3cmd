@@ -55,6 +55,7 @@ s3cmd sync --recursive --preserve dpkg.list s3://bucket-kamu
 date +'%a %b %e %H:%M:$S %Z %Y'
 echo 'Finished Sync to Digitalocean Spaces'
 ```
+Note: ubah "bucket-kamu" dengan bucket kamu
 
 Kalau Sudah simpan dengan cara CTRL+X+Y Enter
 
@@ -84,13 +85,15 @@ Paste Script nya
 #!/bin/sh
 echo 'Started Restore to your Spaces VPS'
 date +'%a %b %e %H:%M:$S %Z %Y'
-s3cmd get -r s3://bkvps/srv/ /srv
-s3cmd get -r s3://bkvps/etc/ /etc
-s3cmd get -r s3://bkvps/home/ /home
-s3cmd get -r s3://bkvps/var/ /var
+s3cmd get -r s3://namabucket/srv/ /srv
+s3cmd get -r s3://namabucket/etc/ /etc
+s3cmd get -r s3://namabucket/home/ /home
+s3cmd get -r s3://namabucket/var/ /var
 date +'%a %b %e %H:%M:$S %Z %Y'
 echo 'Finished Restore to your Spaces VPS'
 ```
+
+Note: ubah "namabucket" dengan bucket kamu
 # Cara menjalankan Script Restore
 ```bash
 sh restores3.sh
