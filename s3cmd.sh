@@ -23,6 +23,14 @@ s3cmd sync --recursive --preserve dpkg.list s3://$bucket
 date +'%a %b %e %H:%M:$S %Z %Y'
 echo 'Finished Sync to Your Spaces' " > ~/s3cmdbcp.sh
 
+read -p "Daftar direktori yang akan di backup:
+•srv
+•etc
+•home
+•var
+Pilih Y untuk melanjutkan proses backup (Y) " confirm
+
+
 # Menjalan kan Script backup
 bash s3cmdbcp.sh
 
