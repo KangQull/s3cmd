@@ -31,5 +31,18 @@ s3cmd get -r s3://$bucket/var/ /var
 date +'%a %b %e %H:%M:$S %Z %Y'
 echo 'Finished Restore to your Spaces VPS' " > ~/s3cmdrst.sh
 
+read -p "
+***********************************************
+*                                             *
+*    Berikut Daftar Direktory yang akan di    *
+*                pulihkan:                    *
+*                                             *
+***********************************************
+*                                             *
+*  •srv         •root           •var          *
+*  •etc         •home                         *
+*                                             *
+***********************************************
+Tekar (Enter) untuk melanjutkan restore data: "
 # Menjalan kan Script backup
 bash s3cmdrst.sh
