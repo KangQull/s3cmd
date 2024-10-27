@@ -11,7 +11,7 @@ read -p "
 ***********************************************
 *                                             *
 *  Untuk configurasi S3cmd di bawah , isi     *
-*  sesuai dengan S3 Object storage punya      *
+*  sesuaikan dengan S3 Object storage punya   *
 *  kalian .                                   *
 *                                             *
 ***********************************************
