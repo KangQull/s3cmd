@@ -17,6 +17,7 @@ echo "echo 'Started Sync to Your Spaces'
 date +'%a %b %e %H:%M:$S %Z %Y'
 s3cmd sync --recursive --preserve /srv  s3://$bucket
 s3cmd sync --recursive --preserve /etc  s3://$bucket
+s3cmd sync --recursive --preserve /root  s3://$bucket
 s3cmd sync --recursive --preserve /home s3://$bucket
 s3cmd sync --recursive --preserve /var  s3://$bucket
 dpkg --get-selections > dpkg.list
@@ -27,6 +28,7 @@ echo 'Finished Sync to Your Spaces' " > ~/s3cmdbcp.sh
 read -p "Daftar direktori yang akan di backup:
 •srv
 •etc
+•root
 •home
 •var
 Pilih Y untuk melanjutkan proses backup (Y) " confirm
