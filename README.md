@@ -2,7 +2,16 @@
 S3CMD VPS UBUNTU
 Backup and Restore Script.
 
-# Install S3CMD VPS
+# Auto install Backup S3cmd VPS
+```bash
+wget https://raw.githubusercontent.com/KangQull/s3cmd/main/s3cmd.sh && sh s3cmd.sh
+```
+# Auto install Restore S3cmd VPS
+```bash
+wget https://raw.githubusercontent.com/KangQull/s3cmd/main/s3cmdbk.sh && sh s3cmdbk.sh
+```
+
+# Manual Install S3CMD VPS
 ```bash
 apt update
 
@@ -71,7 +80,7 @@ Tunggu sambil ngopi Sampai proses selesai backup.
 
 pertama install S3CMD Seperti cara di atas sesuakan dengan s3object storage backup kalian .
 
-# Buat Script Restore
+# Manual Buat Script Restore
 Kalau sudah install, bikin script untuk restore backup VPS nya, paste script di bawah ini.
 
 ```bash
