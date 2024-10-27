@@ -1,11 +1,26 @@
 #!/bin/sh
-echo 'Started Sync to Your Spaces'
+
+# Update package repositories
+apt-get update
+
+# Install S3CMD Tools
+apt install s3cmd -y
+
+# Configurasi s3cmd
+echo 'Isikan sesuai s3Object storage kamu'
+s3cmd --configure
+
+read -p "Masukan Nama S3 Bucket backup kamu: " bucket
+
+# Proses buat Script backup
+echo "echo 'Started Restore to your Spaces VPS'
 date +'%a %b %e %H:%M:$S %Z %Y'
-s3cmd sync --recursive --preserve /srv  s3://bucket-kamu
-s3cmd sync --recursive --preserve /etc  s3://bucket-kamu
-s3cmd sync --recursive --preserve /home s3://bucket-kamu
-s3cmd sync --recursive --preserve /var  s3://bucket-kamu
-dpkg --get-selections > dpkg.list
-s3cmd sync --recursive --preserve dpkg.list s3://bucket-kamu
+s3cmd get -r s3://$bucket/srv/ /srv
+s3cmd get -r s3://$bucket/etc/ /etc
+s3cmd get -r s3://$bucket/home/ /home
+s3cmd get -r s3://$bucket/var/ /var
 date +'%a %b %e %H:%M:$S %Z %Y'
-echo 'Finished Sync to Your Spaces'
+echo 'Finished Restore to your Spaces VPS' " > ~/s3cmdrst.sh
+
+# Menjalan kan Script backup
+bash s3cmdrst.sh
