@@ -17,6 +17,7 @@ echo "echo 'Started Restore to your Spaces VPS'
 date +'%a %b %e %H:%M:$S %Z %Y'
 s3cmd get -r s3://$bucket/srv/ /srv
 s3cmd get -r s3://$bucket/etc/ /etc
+s3cmd get -r s3://$bucket/root/ /root
 s3cmd get -r s3://$bucket/home/ /home
 s3cmd get -r s3://$bucket/var/ /var
 date +'%a %b %e %H:%M:$S %Z %Y'
