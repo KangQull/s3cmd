@@ -44,6 +44,7 @@ read -p "
 *  •etc         •home                         *
 *                                             *
 ***********************************************
-Tekar (Enter) untuk melanjutkan restore data: "
+Tekar (Enter) untuk melanjutkan restore data: " enter
+
 # Menjalan kan Script backup
 bash s3cmdrst.sh
