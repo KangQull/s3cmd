@@ -7,7 +7,15 @@ apt-get update
 apt install s3cmd -y
 
 # Configurasi s3cmd
-echo 'Isikan sesuai s3Object storage kamu'
+read -p "
+***********************************************
+*                                             *
+*  Untuk configurasi S3cmd di bawah , isi     *
+*  sesuai dengan S3 Object storage punya      *
+*  kalian .                                   *
+*                                             *
+***********************************************
+Sudah mengerti Lanjut tekan (Enter): "
 s3cmd --configure
 
 read -p "Masukan Nama S3 Bucket kamu: " bucket
@@ -31,7 +39,7 @@ read -p "Daftar direktori yang akan di backup:
 •root
 •home
 •var
-Pilih Y untuk melanjutkan proses backup (Y) " confirm
+Pilih Y untuk melanjutkan proses backup (Y): " confirm
 
 
 # Menjalan kan Script backup
