@@ -7,7 +7,15 @@ apt-get update
 apt install s3cmd -y
 
 # Configurasi s3cmd
-echo 'Isikan sesuai s3Object storage kamu'
+read -p "
+***********************************************
+*                                             *
+*  Untuk configurasi S3cmd di bawah , isi     *
+*  sesuaikan dengan S3 Object storage punya   *
+*  kalian .                                   *
+*                                             *
+***********************************************
+Sudah mengerti Lanjut tekan (Enter): "
 s3cmd --configure
 
 read -p "Masukan Nama S3 Bucket backup kamu: " bucket
