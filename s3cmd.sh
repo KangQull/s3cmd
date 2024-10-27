@@ -7,6 +7,7 @@ apt-get update
 apt install s3cmd -y
 
 # Configurasi s3cmd
+echo 'Isikan sesuai s3Object storage kamu'
 s3cmd --configure
 
 read -p "Masukan Nama S3 Bucket kamu: " bucket
