@@ -15,7 +15,8 @@ read -p "
 *  kalian .                                   *
 *                                             *
 ***********************************************
-Sudah mengerti Lanjut tekan (Enter): "
+Sudah mengerti Lanjut tekan (Enter): " enter
+
 s3cmd --configure
 
 read -p "Masukan Nama S3 Bucket backup kamu: " bucket
